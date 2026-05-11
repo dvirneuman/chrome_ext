@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WhatsApp Saver Settings</title>
+  <style>
+    body { 
+      padding: 20px; 
+      font-family: Arial, sans-serif; 
+      max-width: 500px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    input[type="url"] { 
+      width: 100%; 
+      padding: 8px; 
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    button { 
+      padding: 8px 15px; 
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #status { 
+      margin-top: 15px; 
+      color: #4CAF50; 
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Google Sheets Integration</h2>
+  <p>To save apartments to Google Sheets, paste your Google Apps Script Web App URL below.</p>
+  
+  <div class="form-group">
+    <label for="webhookUrl"><strong>Webhook URL:</strong></label>
+    <input type="url" id="webhookUrl" placeholder="https://script.google.com/macros/s/.../exec">
+  </div>
+  
+  <button id="save">Save Settings</button>
+  <div id="status"></div>
+  
+  <script src="options.js"></script>
+</body>
+</html>

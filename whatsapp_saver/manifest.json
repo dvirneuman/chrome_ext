@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "WhatsApp Saver",
+  "version": "1.0",
+  "description": "Right-click selected text to save to Google Sheets",
+  "permissions": ["contextMenus", "storage", "scripting", "activeTab"],
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  }
+}
