@@ -7,15 +7,15 @@ function doPost(e) {
     var data = JSON.parse(e.postData.contents);
     
     // Append a new row with the data
-    // Columns: Date, Address, Price, Page URL, Phone Number, WhatsApp Link
+    // Columns: Date, Page URL, Phone Number, WhatsApp Link, Address, Price
     var formattedDate = Utilities.formatDate(new Date(), Session.getScriptTimeZone(), "d/M/yyyy H:mm");
     sheet.appendRow([
       formattedDate, 
-      data.address,
-      data.price,
       data.url, 
       data.phone, 
-      data.whatsappUrl
+      data.whatsappUrl,
+      data.address,
+      data.price
     ]);
     
     return ContentService.createTextOutput(JSON.stringify({ "status": "success" }))
